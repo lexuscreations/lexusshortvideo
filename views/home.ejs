@@ -1,0 +1,53 @@
+<%- include('./partials/header-link'); -%>
+
+<style>
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background: #6990F2;
+    }
+</style>
+
+</head>
+<body>
+
+<%- include('./partials/header'); -%>
+
+    <div class="wrapper">
+        <header>
+            <span>Lexus</span>
+            <i style="font-size: 1rem;">Short</i>
+            <span>Video<br/>Upload & Stream</span>
+        </header>
+
+        <form enctype="multipart/form-data" id='video-upload-form'>
+            <div class='form-group mt-3 videoSelectArea'>
+                <div>
+                    <div class="d-flex justify-content-center align-items-center">
+                        <label class='custom-label'>Select Short Video To Upload: </label>
+                        <input accept="video/mp4" class="file-input" type="file" name="user-file" hidden>
+                        <i class="fas fa-cloud-upload-alt ms-2 formSelectTriger"></i>
+                    </div>
+                    <p class="text-center formSelectTriger">Browse File To Upload</p>
+                </div>
+            </div>
+
+            <div class='form-group text-center mb-3 textareaDetailCon'>
+                <label class='custom-label'>Video Details:</label>
+                <textarea class="form-control" name="details" placeholder="(Optional)" rows="3"></textarea>
+            </div>
+
+            <input type="submit" class="m-0 mb-3" id='submit' value="Upload File" onclick='onSubmit(event)' name="submit">
+        </form>
+
+        <section class="progress-area"></section>
+        <section class="uploaded-area"></section>
+        <div class="mb-2 mt-4 text-center" id='message'></div>
+    </div>
+
+<%- include('./partials/footer'); -%>
+
+<%- include('./partials/footer-link'); -%>

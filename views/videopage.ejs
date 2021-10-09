@@ -1,0 +1,49 @@
+<%- include('./partials/header-link'); -%>
+
+<style>
+
+    body{
+        background: rgb(2,0,36);
+        background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,105,121,1) 0%, rgba(0,212,255,1) 100%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+    }
+    video{
+        outline: none;
+        border: none;
+        box-shadow: 2px 2px 12px 4px #1aa9c6;
+        border-radius: 0.3rem;
+    }
+</style>
+
+</head>
+<body>
+
+<%- include('./partials/header'); -%>
+
+    <div style="margin: 0 1rem;">
+        <video width="100%" controls>
+            <source src="/video/<%=storedFileName%>/play" type="video/mp4"/>
+            Your browser does not support the <code>video</code> element.
+        </video>
+        <br>
+        <br>
+        <div class="h5 text-light">
+            <strong>Video Details: </strong>
+            <%=videoDetails%>
+        </div>
+        <div class="h5 text-light">
+            <strong>Video Name: </strong>
+            <%=videoName%>
+        </div>
+    </div>
+
+<%- include('./partials/footer'); -%>
+
+<%- include('./partials/footer-link'); -%>
